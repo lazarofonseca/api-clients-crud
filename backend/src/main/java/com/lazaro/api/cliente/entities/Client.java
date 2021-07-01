@@ -22,15 +22,16 @@ public class Client implements Serializable{
 	private String name;
 	private String cpf;
 	private Double income;
+	
 	@Column(columnDefinition = "TIMESTAMP WITHOUT TIME ZONE")
 	private Instant birthDate;
-	@Column(columnDefinition = "TIMESTAMP WITHOUT TIME ZONE")
-	private Instant children;
+	
+	private Integer children;
 
 	public Client() {
 	}
 
-	public Client(Long id, String name, String cpf, Double income, Instant birthDate, Instant children) {
+	public Client(Long id, String name, String cpf, Double income, Instant birthDate, Integer children) {
 		this.id = id;
 		this.name = name;
 		this.cpf = cpf;
@@ -79,11 +80,11 @@ public class Client implements Serializable{
 		this.birthDate = birthDate;
 	}
 
-	public Instant getChildren() {
+	public Integer getChildren() {
 		return children;
 	}
 
-	public void setChildren(Instant children) {
+	public void setChildren(Integer children) {
 		this.children = children;
 	}
 
